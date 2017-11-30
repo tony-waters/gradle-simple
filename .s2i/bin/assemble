@@ -4,7 +4,7 @@ echo "-------> assemble called"
 
 echo "---> Installing application source"
 cp -Rf /tmp/src/. ./
-ls -la /tml/src
+ls -la /tmp/src
 ls -la ./
 
 echo "---> Building"
