@@ -4,6 +4,8 @@ echo "-------> assemble called"
 
 echo "---> Installing application source"
 cp -Rf /tmp/src/. ./
+ls -la /tml/src
+ls -la ./
 
 echo "---> Building"
 ./gradlew build -x test
