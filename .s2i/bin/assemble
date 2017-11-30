@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo "-------> assemble called"
+
+echo "---> Installing application source"
+cp -Rf /tmp/src/. ./
+
+echo "---> Building"
+./gradlew build -x test
+
+echo "---> Copying jar"
+#cp /build/libs/gradle-simple.jar ./app.jar
+if [ -z $ARTIFACT_PATH ]; then
+    ARTIFACT_PATH="/build/libs"
+fi
+cp $ARTIFACT_PATH/$ARTIFACT_NAME ./app.jar
+
+echo "-------> assemble finished"
+

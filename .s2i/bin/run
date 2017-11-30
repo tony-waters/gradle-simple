@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "-------> run called"
+exec java $JAVA_PARAMS -jar ./app.jar
+
+echo "-------> run finished"
+
